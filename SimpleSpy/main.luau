@@ -220,8 +220,8 @@ function ErrorPrompt(Message,state)
     end
 end
 
-local Highlight = (isfile and loadfile and isfile("Highlight.lua") and loadfile("Highlight.lua")()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/SimpleSpyV3/highlight.lua"))()
-local LazyFix = loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/SimpleSpyV3/DataToCode.lua"))() -- Very lazy fix as I'm legit just pasting it from the rewrite
+local Highlight = (isfile and loadfile and isfile("Highlight.lua") and loadfile("Highlight.lua")()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/E3LightC/simplespy_edit/refs/heads/main/SimpleSpy/highlight.luau"))()
+local LazyFix = loadstring(game:HttpGet("https://raw.githubusercontent.com/E3LightC/simplespy_edit/refs/heads/main/SimpleSpy/DataToCode.luau"))() -- Very lazy fix as I'm legit just pasting it from the rewrite
 
 local SimpleSpy3 = Create("ScreenGui",{ResetOnSpawn = false})
 local Storage = Create("Folder",{})
@@ -1924,7 +1924,7 @@ if not getgenv().SimpleSpyExecuted then
         end
         codebox = Highlight.new(CodeBox)
         logthread(spawn(function()
-            local suc,err = pcall(game.HttpGet,game,"https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/SimpleSpyV3/update.txt")
+            local suc,err = pcall(game.HttpGet,game,"https://raw.githubusercontent.com/E3LightC/simplespy_edit/refs/heads/main/SimpleSpy/update.txt")
             codebox:setRaw((suc and err) or "")
         end))
         getgenv().SimpleSpy = SimpleSpy
